@@ -1,0 +1,377 @@
+@charset "utf-8";
+
+h1 {
+  font-size: 30px;
+  color: white;
+}
+h2 {
+  font-size: 30px;
+  color: #444444;
+  font-family: "Tsukushi B Round Gothic";
+}
+h3 {
+  font-size: 25px;
+  color: #444444;
+}
+h4 {
+  color: rgb(234, 234, 234);
+  text-align: left;
+  margin: 10px 0px 2px 0px;
+  font-size: 20px;
+  font-family: "Tsukushi B Round Gothic";
+}
+p {
+  font-size: 15px;
+  color: #444444;
+  font-family: "筑紫B丸ゴシック";
+}
+li {
+  font-family: "筑紫B丸ゴシック";
+}
+
+/* ヘッダー */
+.header {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffffff;
+}
+.CURA {
+  font-size: 50px;
+}
+.btn_css {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/*ロゴcss*/
+.logoimg {
+  width: 500px;
+  height: 500px;
+}
+.header p {
+  font-size: 20px;
+  color: white;
+}
+
+/* トップ */
+.top {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.top_block {
+  padding-left: 10%;
+}
+.top_image {
+  padding-right: 10%;
+}
+.sub_title {
+  font-size: 15px;
+  margin-bottom: 80px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+/* 使ってみるボタンcss */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%; /*rem算出をしやすくするために*/
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+a.btn-flat {
+  overflow: hidden;
+  padding: 1.5rem 6rem;
+  color: #fff;
+  border-radius: 10px;
+  background: #000;
+}
+
+a.btn-flat span {
+  position: relative;
+}
+
+a.btn-flat:before {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 150%;
+  height: 500%;
+  content: "";
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-70%) rotate(135deg);
+  transform: translateX(-98%) translateY(-70%) rotate(135deg);
+  background: #7b68ee;
+}
+
+a.btn-flat:hover:before {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(135deg);
+  transform: translateX(-9%) translateY(-25%) rotate(135deg);
+}
+
+/* 説明エリア */
+.ex {
+  padding-top: 160px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+.ex_color {
+  background-color: #7b68ee;
+}
+.ex_block {
+}
+.ex_color_block {
+  color: white;
+}
+.h3 {
+  margin-bottom: 120px;
+}
+
+/* キャラクター紹介 */
+
+.char {
+  margin-top: 160px;
+}
+.char-h2 {
+  padding-left: 10%;
+}
+
+/* スライダーのためのcss */
+.slider {
+  /*横幅94%で左右に余白を持たせて中央寄せ*/
+  width: 94%;
+  margin: 0 auto;
+}
+
+.slider img {
+  width: 30vw; /*スライダー内の画像を60vwにしてレスポンシブ化*/
+  height: auto;
+}
+
+.slider .slick-slide {
+  transform: scale(0.8); /*左右の画像のサイズを80%に*/
+  transition: all 0.5s; /*拡大や透過のアニメーションを0.5秒で行う*/
+  opacity: 0.5; /*透過50%*/
+}
+
+.slider .slick-slide.slick-center {
+  transform: scale(1); /*中央の画像のサイズだけ等倍に*/
+  opacity: 1; /*透過なし*/
+}
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev,
+.slick-next {
+  position: absolute; /*絶対配置にする*/
+  top: 42%;
+  cursor: pointer; /*マウスカーソルを指マークに*/
+  outline: none; /*クリックをしたら出てくる枠線を消す*/
+  border-top: 2px solid #666; /*矢印の色*/
+  border-right: 2px solid #666; /*矢印の色*/
+  height: 15px;
+  width: 15px;
+}
+
+.slick-prev {
+  /*戻る矢印の位置と形状*/
+  left: -1.5%;
+  transform: rotate(-135deg);
+}
+
+.slick-next {
+  /*次へ矢印の位置と形状*/
+  right: -1.5%;
+  transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width: 8px; /*ドットボタンのサイズ*/
+  height: 8px; /*ドットボタンのサイズ*/
+  display: block;
+  border-radius: 50%;
+  background: #ccc; /*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button {
+  background: #333; /*ドットボタンの現在地表示の色*/
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+.slider {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #333;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+/* ミニゲーム画面 */
+.game_block {
+  margin-top: 100px;
+  width: 100%;
+  height: 650px;
+}
+.game_block p {
+  text-align: center;
+  font-size: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.cura_game{
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* フッター */
+footer {
+  background-color: #444444;
+}
+.footer {
+  text-align: center;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2% 2% 0% 2%;
+}
+.footer_p_wrap {
+}
+.footer_img {
+  width: 270px;
+  height: 258px;
+}
+.footer_logo {
+  width: 100%;
+}
+/* .footer_ul {
+  display: flex;
+}
+.p_footer {
+  color: rgb(234, 234, 234);
+  text-align: center;
+  margin: 0;
+  padding: 2%;
+}
+.li_footer {
+  color: rgb(234, 234, 234);
+  text-align: left;
+}
+ul {
+  counter-reset: list;
+  list-style-type: none;
+  font: 14px/1.6 "arial narrow", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  position: relative;
+  color: #333;
+  padding: 0 0 0 23px;
+  margin: 0px 0px;
+  line-height: 20px;
+  border-bottom: dashed 1px #ccc;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+ul li:before {
+  counter-increment: list;
+  content: counter(list) ".";
+  display: block;
+  position: absolute;
+  left: 0px;
+  font-weight: bold;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+ul li:hover,
+ul li:hover:before {
+  font-size: 20px;
+  color: #7b68ee;
+} */
+
+/* 文字の印象 */
+
+.CURA span {
+  display: none;
+}
+
+/*文字列後ろの線の設定*/
+.CURA::after {
+  content: "|";
+  animation: typinganime 0.8s ease infinite;
+}
+
+@keyframes typinganime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
